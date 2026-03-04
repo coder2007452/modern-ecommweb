@@ -20,18 +20,24 @@ const Navbar = () => {
         alt="logo"
       />
       <div className="flex items-center gap-4 lg:gap-8 max-md:hidden">
-        <Link href="/" className="hover:text-gray-900 transition">
-          Home
+        <Link href="#featuredproduct" className="hover:text-gray-900 transition">
+          How Works
         </Link>
         <Link href="/all-products" className="hover:text-gray-900 transition">
-          Shop
+          Product
         </Link>
-        <Link href="/" className="hover:text-gray-900 transition">
-          About Us
+        <Link href="#reward" className="hover:text-gray-900 transition">
+          Rewards
         </Link>
-        <Link href="/" className="hover:text-gray-900 transition">
-          Contact
+        <Link href="#about" className="hover:text-gray-900 transition">
+          About
         </Link>
+        <Link href="#partner" className="hover:text-gray-900 transition">
+          Partner
+        </Link>
+        <button className="md:px-2 px-7 md:py-1 py-1 bg-orange-600 rounded-full text-white font-medium">
+          <a href="#app">Get App</a>
+        </button>
 
         {isSeller && <button onClick={() => router.push('/seller')} className="text-xs border px-4 py-1.5 rounded-full">Seller Dashboard</button>}
 
@@ -73,6 +79,10 @@ const Navbar = () => {
 
               <UserButton.MenuItems>
                 <UserButton.Action label="Products" labelIcon={<BoxIcon />} onClick={() => router.push('/all-products')} />
+              </UserButton.MenuItems>
+
+              <UserButton.MenuItems>
+                <UserButton.Action label="Get App" labelIcon={<BagIcon />} onClick={() => router.push('#app')} />
               </UserButton.MenuItems>
 
               <UserButton.MenuItems>

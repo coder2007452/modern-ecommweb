@@ -1,58 +1,85 @@
-import React from "react";
-import { assets } from "@/assets/assets";
-import Image from "next/image";
+"use client";
 
-const products = [
-  {
-    id: 1,
-    image: assets.girl_with_headphone_image,
-    title: "Unparalleled Sound",
-    description: "Experience crystal-clear audio with premium headphones.",
-  },
-  {
-    id: 2,
-    image: assets.girl_with_earphone_image,
-    title: "Stay Connected",
-    description: "Compact and stylish earphones for every occasion.",
-  },
-  {
-    id: 3,
-    image: assets.boy_with_laptop_image,
-    title: "Power in Every Pixel",
-    description: "Shop the latest laptops for work, gaming, and more.",
-  },
-];
+import { Trash2, Smartphone, Gift } from "lucide-react";
 
-const FeaturedProduct = () => {
+export default function FeaturedProduct() {
   return (
-    <div className="mt-14">
-      <div className="flex flex-col items-center">
-        <p className="text-3xl font-medium">Featured Products</p>
-        <div className="w-28 h-0.5 bg-orange-600 mt-2"></div>
-      </div>
+    <section className="bg-gray-50 py-24 px-6" id="featuredproduct">
+      <div className="max-w-6xl mx-auto text-center">
+        
+        {/* Heading */}
+        <h2 className="text-5xl font-bold text-gray-900">
+          How It Works
+        </h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-14 mt-12 md:px-14 px-4">
-        {products.map(({ id, image, title, description }) => (
-          <div key={id} className="relative group">
-            <Image
-              src={image}
-              alt={title}
-              className="group-hover:brightness-75 transition duration-300 w-full h-auto object-cover"
-            />
-            <div className="group-hover:-translate-y-4 transition duration-300 absolute bottom-8 left-8 text-white space-y-2">
-              <p className="font-medium text-xl lg:text-2xl">{title}</p>
-              <p className="text-sm lg:text-base leading-5 max-w-60">
-                {description}
-              </p>
-              <button className="flex items-center gap-1.5 bg-orange-600 px-4 py-2 rounded">
-                Buy now <Image className="h-3 w-3" src={assets.redirect_icon} alt="Redirect Icon" />
-              </button>
+        <div className="w-20 h-1 bg-green-500 mx-auto mt-4 rounded-full"></div>
+
+        <p className="mt-6 text-gray-600 text-lg">
+          Three simple steps to earn rewards while making a difference.
+        </p>
+
+        {/* Cards */}
+        <div className="grid md:grid-cols-3 gap-10 mt-20">
+          
+          {/* Step 1 */}
+          <div className="bg-white rounded-3xl shadow-lg p-10 relative">
+            <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-green-600 text-white w-12 h-12 flex items-center justify-center rounded-full font-bold">
+              1
             </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-};
 
-export default FeaturedProduct;
+            <div className="mt-10 flex justify-center">
+              <Trash2 size={48} className="text-gray-500" />
+            </div>
+
+            <h3 className="mt-6 text-xl font-bold text-gray-900">
+              Dispose Your Trash
+            </h3>
+
+            <p className="mt-4 text-gray-600 leading-relaxed">
+              Drop your waste into any Trashee smart bin located across the city.
+            </p>
+          </div>
+
+          {/* Step 2 */}
+          <div className="bg-white rounded-3xl shadow-lg p-10 relative">
+            <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-green-600 text-white w-12 h-12 flex items-center justify-center rounded-full font-bold">
+              2
+            </div>
+
+            <div className="mt-10 flex justify-center">
+              <Smartphone size={48} className="text-indigo-600" />
+            </div>
+
+            <h3 className="mt-6 text-xl font-bold text-gray-900">
+              Scan QR Code
+            </h3>
+
+            <p className="mt-4 text-gray-600 leading-relaxed">
+              Open the Trashee app and scan the QR code on the bin to record your disposal.
+            </p>
+          </div>
+
+          {/* Step 3 */}
+          <div className="bg-white rounded-3xl shadow-lg p-10 relative">
+            <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-green-600 text-white w-12 h-12 flex items-center justify-center rounded-full font-bold">
+              3
+            </div>
+
+            <div className="mt-10 flex justify-center">
+              <Gift size={48} className="text-yellow-500" />
+            </div>
+
+            <h3 className="mt-6 text-xl font-bold text-gray-900">
+              Earn Rewards
+            </h3>
+
+            <p className="mt-4 text-gray-600 leading-relaxed">
+              Receive points instantly and redeem them for rewards, discounts, and eco-friendly products.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  );
+}

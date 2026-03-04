@@ -6,27 +6,75 @@ const HeaderSlider = () => {
   const sliderData = [
     {
       id: 1,
-      title: "Experience Pure Sound - Your Perfect Headphones Awaits!",
-      offer: "Limited Time Offer 30% Off",
-      buttonText1: "Buy now",
-      buttonText2: "Find more",
+      title: "Clean Campus. Green Future. Powered by TRASHEE.",
+      offer: "",
+      buttonText1: "Explore Products",
+      buttonText2: "Download App",
       imgSrc: assets.header_headphone_image,
     },
     {
       id: 2,
-      title: "Next-Level Gaming Starts Here - Discover PlayStation 5 Today!",
-      offer: "Hurry up only few lefts!",
-      buttonText1: "Shop Now",
-      buttonText2: "Explore Deals",
+      title: "Clean Habits Start Young!",
+      offer: "",
+      buttonText1: "Explore Products",
+      buttonText2: "Download App",
       imgSrc: assets.header_playstation_image,
     },
     {
       id: 3,
-      title: "Power Meets Elegance - Apple MacBook Pro is Here for you!",
-      offer: "Exclusive Deal 40% Off",
-      buttonText1: "Order Now",
-      buttonText2: "Learn More",
+      title: "Smart Waste Management – Clean Office, Smarter Future!",
+      offer: "",
+      buttonText1: "Explore Products",
+      buttonText2: "Download App",
       imgSrc: assets.header_macbook_image,
+    },
+    {
+      id: 4,
+      title: "Recycle Today – Build a Greener Tomorrow!",
+      offer: "",
+      buttonText1: "Explore Products",
+      buttonText2: "Download App",
+      imgSrc: assets.header_main_image,
+    },
+    {
+      id: 5,
+      title: "Recycling Made Intelligent — Empowering Every Campus.",
+      offer: "",
+      buttonText1: "Explore Products",
+      buttonText2: "Download App",
+      imgSrc: assets.header_clean_image,
+    },
+    {
+      id: 6,
+      title: "Modern Design. Intelligent Disposal.",
+      offer: "",
+      buttonText1: "Explore Products",
+      buttonText2: "Download App",
+      imgSrc: assets.header_plas_image,
+    },
+    {
+      id: 7,
+      title: "Scan. Dispose. Earn. Sustainability Simplified.",
+      offer: "",
+      buttonText1: "Explore Products",
+      buttonText2: "Download App",
+      imgSrc: assets.header_lead_image,
+    },
+    {
+      id: 8,
+      title: "Smarter Streets Begin Here.",
+      offer: "",
+      buttonText1: "Explore Products",
+      buttonText2: "Download App",
+      imgSrc: assets.header_transparent_image,
+    },
+    {
+      id: 9,
+      title: "Keep India Clean — The Smart Way.",
+      offer: "",
+      buttonText1: "Explore Products",
+      buttonText2: "Download App",
+      imgSrc: assets.header_india_image,
     },
   ];
 
@@ -63,17 +111,17 @@ const HeaderSlider = () => {
               </h1>
               <div className="flex items-center mt-4 md:mt-6 ">
                 <button className="md:px-10 px-7 md:py-2.5 py-2 bg-orange-600 rounded-full text-white font-medium">
-                  {slide.buttonText1}
+                  <a href="/all-products">{slide.buttonText1}</a>
                 </button>
                 <button className="group flex items-center gap-2 px-6 py-2.5 font-medium">
-                  {slide.buttonText2}
+                  <a href="/all-products">{slide.buttonText2}</a>
                   <Image className="group-hover:translate-x-1 transition" src={assets.arrow_icon} alt="arrow_icon" />
                 </button>
               </div>
             </div>
             <div className="flex items-center flex-1 justify-center">
               <Image
-                className="md:w-72 w-48"
+                className="w-62 md:w-[300px] lg:w-[450px]"
                 src={slide.imgSrc}
                 alt={`Slide ${index + 1}`}
               />

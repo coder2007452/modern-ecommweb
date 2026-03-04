@@ -1,4 +1,4 @@
-import logo from "./logo.svg";
+import logo from "./logo.png";
 import search_icon from "./search_icon.svg";
 import user_icon from "./user_icon.svg";
 import cart_icon from "./cart_icon.svg";
@@ -46,10 +46,21 @@ import product_details_page_apple_earphone_image2 from "./product_details_page_a
 import product_details_page_apple_earphone_image3 from "./product_details_page_apple_earphone_image3.png";
 import product_details_page_apple_earphone_image4 from "./product_details_page_apple_earphone_image4.png";
 import product_details_page_apple_earphone_image5 from "./product_details_page_apple_earphone_image5.png";
+import header_main_image from "./header_main_image.png";
+import header_clean_image from "./header_clean_image.png";
+import header_plas_image from "./header_plas_image.png";
+import header_lead_image from "./header_lead_image.png";
+import header_transparent_image from "./header_transparent_image.png";
+import header_india_image from "./header_india_image.png";
 
 export const assets = {
   logo,
   search_icon,
+  header_clean_image,
+  header_plas_image,
+  header_transparent_image,
+  header_india_image,
+  header_lead_image,
   user_icon,
   cart_icon,
   add_icon,
@@ -73,6 +84,7 @@ export const assets = {
   header_headphone_image,
   header_playstation_image,
   header_macbook_image,
+  header_main_image,
   macbook_image,
   bose_headphone_image,
   apple_earphone_image,
